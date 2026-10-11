@@ -1,7 +1,7 @@
 # AI Learning Platform (LMS)
 
 ## Project Overview
-This repository contains the source code for the AI Learning Platform, a personal learning management system integrated with Retrieval-Augmented Generation (RAG) capabilities. 
+This platform is a personalized learning management web application designed to optimize the self-study experience by leveraging Artificial Intelligence (AI) and modern pedagogical methodologies. The system addresses core challenges faced by independent learners, such as the lack of clear learning paths, susceptibility to distractions, and the time-consuming nature of synthesizing complex information from lengthy documents. By integrating a Retrieval-Augmented Generation (RAG) architecture with advanced learning algorithms (SM-2, Interleaved Practice), the project delivers a cohesive, secure, and highly personalized educational workspace.
 
 The project follows a Modular Monolith architecture within a single repository (Monorepo), designed for maintainability, ease of local development, and strict dependency management.
 
@@ -40,7 +40,7 @@ Choose the appropriate Docker setup based on your role and operating system:
 
 ## Strict Tooling & Dependency Guidelines
 
-To prevent lockfile conflicts, environment pollution, and deployment failures, the following rules are strictly enforced. Violating these may result in failed CI/CD pipelines.
+To prevent lockfile conflicts, environment pollution, and deployment failures, the following rules are strictly enforced.
 
 1.  **Frontend Package Management:**
     *   **DO NOT use `npm install` or `yarn`.**
@@ -50,7 +50,7 @@ To prevent lockfile conflicts, environment pollution, and deployment failures, t
     *   All package additions must use: `uv pip install <package-name>`
     *   After installation, you must freeze dependencies: `uv pip freeze > requirements.txt`
 3.  **Infrastructure Mutability:**
-    *   Do not modify `docker-compose.yml` (e.g., changing exposed ports, adding new services) without prior review and approval from the infrastructure lead.
+    *   Do not modify `docker-compose.yml` (e.g., changing exposed ports, adding new services) without prior review and approval from the infrastructure member.
 
 ---
 
